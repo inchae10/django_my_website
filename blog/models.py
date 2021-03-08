@@ -8,3 +8,7 @@ class Post(models.Model):
 
     created = models.DateTimeField()  # 언제작성이 되었는지
     author = models.ForeignKey(User, on_delete=models.CASCADE)  # 어떤 사용자가 작성했는지
+
+
+    def __str__(self):
+        return '{} :: {}'.format(self.title, self.author)
