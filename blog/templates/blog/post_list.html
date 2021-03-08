@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
+<!--    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.css">-->
+<!--    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">-->
+    <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
+
 </head>
 <body>
 <h1>Blog</h1>
@@ -10,10 +18,17 @@
 <h3>{{ a_plus_b}} </h3>
 
 {% for p in object_list %}
-    <h3>{{ p.title }}</h3>
-    <h4>{{ p.created }} by {{p.author}}</h4>
-    <p> {{p.content}} </p>
+<h3>{{ p.title }}</h3>
+<h4>{{ p.created }} by {{p.author}}</h4>
+<p> {{p.content}} </p>
 {% endfor %}
+
+<!--    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>-->
+    <script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
+<!--    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="{% static 'blog/bootstrap/bootstrap.bundle.min.js' %}"></script>
+<!--    <script src="https://bootswatch.com/_assets/js/custom.js"></script>-->
+    <script src="{% static 'blog/_assets/js/custom.js' %}"></script>
 
 </body>
 </html>
