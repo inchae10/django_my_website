@@ -1,2 +1,2 @@
-# django_my_website
+# django
 django test
